@@ -6,3 +6,5 @@ Git and GitHub
 -
 This file is now modified!!
 I have modified it again!!!
+--------------------------------
+Modified file again, trying to merge a branch into the master branch
