@@ -1,1 +1,2 @@
 This is what I committed from CLI
+Now making changes when I have already changed something from Github
