@@ -2,7 +2,7 @@ const http = require('http')
 const fs = require('fs')
 const url = require('url')
 
-const replaceTemplate = require('./modules.js/replaceTemplate')
+const replaceTemplate = require('./modules/replaceTemplate')
 
 const templateOverview = fs.readFileSync(`${__dirname}/starter/templates/template-overview.html`, 'utf-8');
 const templateProduct = fs.readFileSync(`${__dirname}/starter/templates/template-product.html`, 'utf-8');
