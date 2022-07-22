@@ -1,6 +1,7 @@
 const http = require('http')
 const fs = require('fs')
 const url = require('url')
+const slugify = require('slugify')
 
 const replaceTemplate = require('./modules/replaceTemplate')
 
@@ -11,6 +12,9 @@ const template = fs.readFileSync(`${__dirname}/starter/templates/template.html`,
 const data = fs.readFileSync(`${__dirname}/starter/dev-data/data.json`)
 const dataObj = JSON.parse(data)
 
+const urls = dataObj.map(el => slugify(el.productName, {lower: true}))
+console.log(urls)
+
 const server = http.createServer((req, res) => {
     const {query, pathname} = url.parse(req.url, true)
 
@@ -20,7 +24,8 @@ const server = http.createServer((req, res) => {
         
         const cardsHtml = dataObj.map(el => replaceTemplate(template, el)).join('');
         const output = templateOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
-        res.end(output);
+        res.end(output)
+        console.log(output);
     }
 
     // API
