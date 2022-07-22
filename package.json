@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/shubh018/learning/issues"
   },
-  "homepage": "https://github.com/shubh018/learning#readme"
+  "homepage": "https://github.com/shubh018/learning#readme",
+  "dependencies": {
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
