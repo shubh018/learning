@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.7 on darwin)" generated="20221019 11:03:48.487" rpa="false" schemaversion="3">
+<suite id="s1" name="Learning" source="/Users/shubhamsaxena/PycharmProjects/Learning">
+<suite id="s1-s1" name="TestSuite" source="/Users/shubhamsaxena/PycharmProjects/Learning/TestSuite.robot">
+<test id="s1-s1-t1" name="Testing_cases" line="17">
+<kw name="Get Current Date" library="DateTime">
+<var>${date1}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221019 11:03:48.560" level="INFO">${date1} = 2022-10-19 11:03:48.559</msg>
+<status status="PASS" starttime="20221019 11:03:48.559" endtime="20221019 11:03:48.560"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${da}</var>
+<arg>${date1}</arg>
+<arg>datetime</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20221019 11:03:48.564" level="INFO">${da} = 2022-10-19 11:03:48.559000</msg>
+<status status="PASS" starttime="20221019 11:03:48.560" endtime="20221019 11:03:48.564"/>
+</kw>
+<kw name="New Test" library="second">
+<arg>datee=${da}</arg>
+<msg timestamp="20221019 11:03:48.566" level="INFO">${test_name} = Testing_cases</msg>
+<msg timestamp="20221019 11:03:48.566" level="INFO">2022-10-19 11:03:48.559000
+INSERT INTO bidder.PATIENT_PLANNER_BQA_RUN (test_name,execution_time,status, pp_section,rule, message,`system`,timestamp) VALUES (Testing_cases,6ms,FAILED,Total Universe,Total Universe coun should never dip below 200M,division by zero,API,2022-10-19 11:03:48.565658);
+yes</msg>
+<msg timestamp="20221019 11:03:48.567" level="FAIL">division by zero</msg>
+<status status="FAIL" starttime="20221019 11:03:48.565" endtime="20221019 11:03:48.567"/>
+</kw>
+<status status="FAIL" starttime="20221019 11:03:48.558" endtime="20221019 11:03:48.568">division by zero</status>
+</test>
+<kw name="test" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>test</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221019 11:03:48.570" level="INFO">test</msg>
+<status status="PASS" starttime="20221019 11:03:48.569" endtime="20221019 11:03:48.570"/>
+</kw>
+<status status="PASS" starttime="20221019 11:03:48.569" endtime="20221019 11:03:48.570"/>
+</kw>
+<status status="FAIL" starttime="20221019 11:03:48.538" endtime="20221019 11:03:48.570"/>
+</suite>
+<status status="FAIL" starttime="20221019 11:03:48.506" endtime="20221019 11:03:48.571"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Learning">Learning</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="TestSuite">Learning.TestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
